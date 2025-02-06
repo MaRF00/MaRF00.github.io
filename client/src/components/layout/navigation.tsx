@@ -1,32 +1,23 @@
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 export default function Navigation() {
   return (
-    <header className="border-b border-gray-100">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/">
-          <a className="text-2xl font-semibold text-[#1D1D1F]">TECNOREPARA</a>
-        </Link>
-        
-        <div className="hidden sm:flex space-x-8">
-          <Link href="/">
-            <a className="text-[#1D1D1F] hover:text-[#007AFF] transition-colors">Home</a>
-          </Link>
-          <Link href="/services">
-            <a className="text-[#1D1D1F] hover:text-[#007AFF] transition-colors">Services</a>
-          </Link>
-          <Link href="/contact">
-            <a className="text-[#1D1D1F] hover:text-[#007AFF] transition-colors">Contact</a>
-          </Link>
+    <header className="bg-[#14427B] text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center py-3 px-4">
+          <div className="flex items-center">
+            <span className="text-xl font-semibold">Tecno Repara Madrid</span>
+            <span className="ml-2 text-sm text-gray-300">Servicio Low Cost</span>
+          </div>
+          <a 
+            href="tel:91XXX XX XX" 
+            className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-md transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            <span>91 XXX XX XX</span>
+          </a>
         </div>
-
-        <Link href="/contact">
-          <Button className="bg-[#007AFF] hover:bg-[#0051C3]">
-            Request Repair
-          </Button>
-        </Link>
-      </nav>
+      </div>
     </header>
   );
 }
